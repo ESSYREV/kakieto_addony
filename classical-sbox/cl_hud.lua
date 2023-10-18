@@ -1,5 +1,3 @@
--- Требуется https://github.com/Threebow/tdlib
-
 surface.CreateFont( "classical-sandbox-hud-", {
 	font = "Trebuchet24", --  Use the font-name which is shown to you by your operating system Font Viewer, not the file name
 	extended = false,
@@ -271,4 +269,12 @@ hook.Add( "PlayerSwitchWeapon", "classical-sandbox-hud", function( ply, oldWeapo
 	end
 
 
+end)
+
+
+hook.Add( "OnScreenSizeChanged", "classical-sandbox-hud", function( oldWidth, oldHeight )
+	H = ScrH()
+
+	gHUD:SetPos(15,H-160)
+	gHUDAmmo:SetPos(325,H-98)
 end)
