@@ -1,0 +1,7 @@
+hook.Add("PlayerDisconnected","DisconnectCleanUp",function()
+    if player.GetCount() == 0 then
+        game.CleanUpMap()
+    end
+end)
+
+-- Скорее всего работает только с sv_hibernate_think 1
